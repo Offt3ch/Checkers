@@ -9,4 +9,3 @@ Checkers game for Python Class
 6.  - Capture move is a move where one player takes the piece of another player 
 7.  Pieces may only move diagonally 
 8.  If a player makes it to the back row of the opposite players side, their piece is made a king and can move both backwards and forwards 
-9.  
