@@ -1,0 +1,53 @@
+import pygame
+import numpy as np
+import checkers_pieces as piece
+import time
+
+arr = np.array([[11, 12, 13, 14, 15, 16, 17, 18], [21, 22, 23, 24, 25, 26, 27, 28], [31, 32, 33, 34, 35, 36, 27, 38],
+                [41, 42, 43, 44, 45, 46, 47, 48], [51, 52, 53, 54, 55, 56, 57, 58], [61, 62, 63, 64, 65, 66, 67, 68],
+                [71, 72, 73, 74, 75, 76, 77, 78], [81, 82, 83, 84, 85, 86, 87, 88]])
+print(arr)
+
+red1 = piece.Pieces(81, 'r')
+red2 = piece.Pieces(83, 'r')
+red3 = piece.Pieces(85, 'r')
+red4 = piece.Pieces(87, 'r')
+red5 = piece.Pieces(72, 'r')
+red6 = piece.Pieces(74, 'r')
+red7 = piece.Pieces(76, 'r')
+red8 = piece.Pieces(78, 'r')
+red9 = piece.Pieces(61, 'r')
+red10 = piece.Pieces(63, 'r')
+red11 = piece.Pieces(65, 'r')
+red12 = piece.Pieces(67, 'r')
+
+black1 = piece.Pieces(12, 'b')
+black2 = piece.Pieces(14, 'b')
+black3 = piece.Pieces(16, 'b')
+black4 = piece.Pieces(18, 'b')
+black5 = piece.Pieces(21, 'b')
+black6 = piece.Pieces(23, 'b')
+black7 = piece.Pieces(25, 'b')
+black8 = piece.Pieces(27, 'b')
+black9 = piece.Pieces(32, 'b')
+black10 = piece.Pieces(34, 'b')
+black11 = piece.Pieces(36, 'b')
+black12 = piece.Pieces(38, 'b')
+
+black10.move_right()
+print(black10.move_right())
+
+X=472
+Y=472
+pygame.init()
+rootDisplay = pygame.display.set_mode((X,Y))
+
+board = pygame.image.load('./checkersBoard.png')
+white = (0, 0, 0)
+rootDisplay.fill(white)
+for x in range(10):
+    rootDisplay.blit(board, (0,0))
+    for z in range (3):
+        pygame.draw.circle(rootDisplay, 'red',(29.5+59*x,29.5+59*z) , 21)
+    pygame.display.update()
+    time.sleep(3)
