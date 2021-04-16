@@ -1,0 +1,40 @@
+
+class Pieces:
+    def __init__(self, location, color):
+        self.position = location
+        self.color = color
+
+    def get_info(self):
+        return self.position, self.color
+
+    def move_left(self):
+        if self.color == 'r':
+            self.position -= 5.5
+            if self.position % 10 == 0 or self.position == 19 or self.position == 29 or self.position == 39 \
+                    or self.position == 49 or self.position == 59 or self.position == 69 or self.position == 79 \
+                    or self.position == 89:
+                self.position += 11
+            return int(self.position)
+        elif self.color == 'b':
+            self.position += 5.5
+            if self.position % 10 == 0 or self.position == 19 or self.position == 29 or self.position == 39 \
+                    or self.position == 49 or self.position == 59 or self.position == 69 or self.position == 79 \
+                    or self.position == 89:
+                self.position -= 11
+            return int(self.position)
+
+    def move_right(self):
+        if self.color == 'r':
+            self.position -= 4.5
+            if self.position % 10 == 0 or self.position == 19 or self.position == 29 or self.position == 39 \
+                    or self.position == 49 or self.position == 59 or self.position == 69 or self.position == 79 \
+                    or self.position == 89:
+                self.position += 9
+            return int(self.position)
+        if self.color == 'b':
+            self.position += 4.5
+            if self.position % 10 == 0 or self.position == 19 or self.position == 29 or self.position == 39 \
+                    or self.position == 49 or self.position == 59 or self.position == 69 or self.position == 79 \
+                    or self.position == 89:
+                self.position -= 9
+            return int(self.position)
