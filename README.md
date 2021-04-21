@@ -1,7 +1,7 @@
 # Checkers
 Checkers game for Python Class
 
-1. Board is 6x6 squares
+1. Board is 8x8 squares
 2. each player is given 6 pieces to start out with 
 3. Red moves first
 4. Regular moves and Capture moves 
